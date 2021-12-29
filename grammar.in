@@ -1,0 +1,7 @@
+S
+int char id , ;
+S T L L'
+S -> T L
+T -> int | char
+L -> id L'
+L' -> , L | ;
