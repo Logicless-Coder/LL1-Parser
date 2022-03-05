@@ -1,0 +1,48 @@
+1. Read grammar from file
+2. Calculate First
+3. Calculate Follow
+4. Construct Parsing Table
+	4.1 Grammar may be invalid
+5. Read string
+6. Check string against the grammar
+
+
+// Grammar input syntax
+<start>
+<terminals>
+<non-terminals>
+<productions>
+
+// Example input
+S
+( + ) a
+S F
+S -> F
+S -> ( S + F )
+F -> a
+
+Symbol: terminal | non-terminals ( a, S, F ... )
+Sequence: vector<Symbol> list of symbols ( a, ( S + F ), F )
+Production: pair<Symbol, Sequence> ( S -> ( S + F ))
+Grammar: {
+	start: Symbol,
+	terminals: vector<Symbol>,
+	non-terminals: vector<Symbol>,
+	productions: vector<Production>
+}
+
+set<Symbol> first(Symbol)
+set<Symbol> first(Sequence)
+
+vector<Symbol> follow(Symbol)
+
+map<pair<Symbol, Symbol>, Production> parsingTable(Grammar)
+// ^- Also checks if the grammar is not LL(1)
+
+bool check(Grammar, input)
+
+
+
+
+
+

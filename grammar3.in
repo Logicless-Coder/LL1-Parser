@@ -1,0 +1,11 @@
+E
++ * ( ) n ^
+T R S F E
+E -> T R
+R -> ^
+R -> + E
+T -> F S
+S -> ^
+S -> * T
+F -> n
+F -> ( E )
